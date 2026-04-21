@@ -1,0 +1,381 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #f8f1e4;
+    background-image: radial-gradient(circle at 10% 20%, rgba(100, 65, 35, 0.04) 2%, transparent 2.5%),
+                      radial-gradient(circle at 85% 65%, rgba(80, 50, 25, 0.03) 1.8%, transparent 2%);
+    background-size: 55px 55px, 70px 70px;
+    font-family: 'Inter', 'Segoe UI', sans-serif;
+    color: #2c241a;
+    line-height: 1.5;
+}
+
+.fixed-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: #fff8ef;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+    padding: 1rem 2rem;
+    z-index: 1000;
+    border-bottom: 2px solid #e2cfb3;
+}
+
+.header-container {
+    max-width: 1300px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.site-title {
+    font-size: 1.8rem;
+    font-weight: 900;
+    font-family: 'Playfair Display', serif;
+    background: linear-gradient(135deg, #7a4b2a, #b47c44);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+.site-title i {
+    color: #b47c44;
+    margin-right: 8px;
+}
+
+.nav-menu {
+    display: flex;
+    gap: 2rem;
+}
+
+.nav-menu a {
+    text-decoration: none;
+    font-weight: 600;
+    color: #5a3e28;
+    transition: 0.2s;
+    padding: 0.3rem 0;
+    border-bottom: 2px solid transparent;
+}
+
+.nav-menu a:hover, .nav-menu a.active {
+    color: #b1622c;
+    border-bottom-color: #c2895e;
+}
+
+.main-content {
+    max-width: 1300px;
+    margin: 0 auto;
+    padding: 7rem 2rem 4rem 2rem;
+}
+
+.hero-section {
+    text-align: center;
+    margin-bottom: 3rem;
+    padding: 2rem;
+    background: rgba(255, 245, 235, 0.6);
+    border-radius: 2rem;
+}
+
+.hero-section h1 {
+    font-size: 2.8rem;
+    font-family: 'Playfair Display', serif;
+    color: #4d311b;
+    margin-bottom: 0.5rem;
+}
+
+.hero-section p {
+    font-size: 1.2rem;
+    color: #7a5a3e;
+    font-style: italic;
+}
+
+.timeline-showcase {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    margin: 2rem 0 3rem;
+    background: rgba(250, 243, 230, 0.7);
+    border-radius: 3rem;
+    padding: 2rem;
+    border: 1px solid #e6d5be;
+}
+
+.car-card {
+    flex: 1;
+    min-width: 280px;
+    background: #fffcf5;
+    border-radius: 2rem;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.08);
+    border: 1px solid #eedfcb;
+}
+
+.car-card:hover {
+    transform: translateY(-5px);
+}
+
+.car-card img {
+    width: 100%;
+    height: 240px;
+    object-fit: cover;
+    background-color: #e9dbc9;
+    display: block;
+    border-bottom: 3px solid #e0cbb0;
+}
+
+.card-content {
+    padding: 1.5rem;
+}
+
+.card-era {
+    display: inline-block;
+    background: #e4cfb5;
+    padding: 0.2rem 1rem;
+    border-radius: 30px;
+    font-size: 0.7rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    color: #5c3f24;
+    margin-bottom: 0.8rem;
+}
+
+.car-card h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.6rem;
+    font-weight: 800;
+    margin-bottom: 0.3rem;
+    color: #3f2a18;
+}
+
+.car-sub {
+    font-size: 0.85rem;
+    color: #aa7c54;
+    margin-bottom: 1rem;
+    border-left: 3px solid #dbba91;
+    padding-left: 0.7rem;
+    font-weight: 500;
+}
+
+.car-desc {
+    font-size: 0.95rem;
+    color: #4a3727;
+    line-height: 1.45;
+}
+
+.arrow-icon {
+    font-size: 3rem;
+    color: #b97f4b;
+    background: #f4ecdf;
+    width: 70px;
+    height: 70px;
+    border-radius: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 5px 12px rgba(0, 0, 0, 0.1);
+}
+
+.intro-quote {
+    background: #fff6ed;
+    border-left: 6px solid #c2895e;
+    padding: 1.8rem;
+    border-radius: 1.5rem;
+    margin-top: 2rem;
+    text-align: center;
+}
+
+.intro-quote i {
+    font-size: 2rem;
+    color: #c2895e;
+    margin-bottom: 0.5rem;
+}
+
+.intro-quote p {
+    font-size: 1.2rem;
+    font-style: italic;
+    color: #4a3627;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.intro-quote span {
+    display: block;
+    margin-top: 1rem;
+    font-weight: 600;
+    color: #8b694a;
+}
+
+.page-header {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.page-header h1 {
+    font-size: 2.5rem;
+    font-family: 'Playfair Display', serif;
+    color: #4d311b;
+}
+
+.page-header p {
+    color: #7a5a3e;
+    font-size: 1.1rem;
+}
+
+.timeline-istorie {
+    display: flex;
+    flex-direction: column;
+    gap: 1.8rem;
+    margin: 2rem 0;
+}
+
+.timeline-item {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    background: #fffcf5;
+    border-radius: 1.5rem;
+    padding: 1.2rem;
+    border: 1px solid #e6d5be;
+    transition: 0.2s;
+}
+
+.timeline-item:hover {
+    background: #fffef9;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+}
+
+.timeline-year {
+    min-width: 100px;
+    font-size: 1.8rem;
+    font-weight: 800;
+    font-family: 'Playfair Display', serif;
+    color: #b97f4b;
+    line-height: 1.2;
+}
+
+.timeline-content {
+    flex: 1;
+}
+
+.timeline-content h3 {
+    font-size: 1.4rem;
+    color: #4d311b;
+    margin-bottom: 0.5rem;
+}
+
+.timeline-content p {
+    color: #4a3727;
+    line-height: 1.5;
+}
+
+.bibliografie-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: 2rem;
+    margin: 2rem 0;
+}
+
+.bib-card {
+    background: #fffcf5;
+    border-radius: 1.5rem;
+    padding: 1.8rem;
+    border: 1px solid #e6d5be;
+    transition: 0.2s;
+}
+
+.bib-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+}
+
+.bib-card i {
+    font-size: 2.2rem;
+    color: #b97f4b;
+    margin-bottom: 1rem;
+}
+
+.bib-card h3 {
+    font-size: 1.3rem;
+    margin-bottom: 0.8rem;
+    color: #4d311b;
+}
+
+.bib-card p {
+    color: #5e4632;
+    margin-bottom: 1rem;
+    font-size: 0.9rem;
+}
+
+.bib-card a {
+    color: #b1622c;
+    text-decoration: none;
+    font-weight: 600;
+    border-bottom: 1px dotted #c2895e;
+}
+
+.bib-card ul {
+    margin-top: 0.8rem;
+    padding-left: 1.2rem;
+    color: #5e4632;
+}
+
+.bib-card li {
+    margin-bottom: 0.3rem;
+}
+
+.note-bibliografie {
+    background: #f3ecdf;
+    border-radius: 1rem;
+    padding: 1.5rem;
+    text-align: center;
+    margin-top: 2rem;
+    border: 1px solid #e2cfb3;
+}
+
+.note-bibliografie i {
+    font-size: 1.8rem;
+    color: #b97f4b;
+    margin-bottom: 0.5rem;
+}
+
+footer {
+    text-align: center;
+    padding: 2rem;
+    font-size: 0.8rem;
+    color: #9f8468;
+    border-top: 1px solid #e3d2bd;
+    margin-top: 3rem;
+    background: #fffaf2;
+}
+
+@media (max-width: 800px) {
+    .timeline-showcase {
+        flex-direction: column;
+    }
+    .arrow-icon {
+        transform: rotate(90deg);
+    }
+    .header-container {
+        flex-direction: column;
+        align-items: center;
+    }
+    .main-content {
+        padding-top: 8rem;
+    }
+    .timeline-year {
+        font-size: 1.4rem;
+        min-width: 80px;
+    }
+}
